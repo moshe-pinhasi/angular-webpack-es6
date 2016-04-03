@@ -3,7 +3,7 @@
 require('./hello.less');
 
 const html = require('./hello.html');
-const swModule = angular.module('hello', []);
+const appModule = angular.module('hello', []);
 
 HelloController.$inject = [];
 function HelloController() {
@@ -11,7 +11,7 @@ function HelloController() {
 
 }
 
-swModule.config(['$stateProvider', '$urlRouterProvider',
+appModule.config(['$stateProvider', '$urlRouterProvider',
 	($stateProvider, $urlRouterProvider) => {
 		$stateProvider
 			.state('hello', {
@@ -25,4 +25,4 @@ swModule.config(['$stateProvider', '$urlRouterProvider',
 		$urlRouterProvider.otherwise('/');
 	}]);
 
-module.exports = swModule.name;
+module.exports = appModule.name;

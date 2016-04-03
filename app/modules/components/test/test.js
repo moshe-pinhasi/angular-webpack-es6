@@ -2,18 +2,19 @@
 
 require('./test.less');
 
-const swModule = angular.module('test', []);
+const appModule = angular.module('test', []);
 
 HelloController.$inject = [];
 function HelloController() {
 
 
 }
-swModule.component('test', {
+
+appModule.component('test', {
 	controllerAs: 'testCtrl',
 	controller: [function() {
 	}],
 	template: require('./test.html')
 });
 
-module.exports = swModule.name;
+module.exports = appModule.name;
