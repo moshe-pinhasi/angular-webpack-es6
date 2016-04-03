@@ -2,6 +2,7 @@
 
 var webpack = require('webpack'),
 	HtmlWebpackPlugin = require('html-webpack-plugin'),
+	WebpackNotifierPlugin = require('webpack-notifier'),
 	path = require('path');
 
 module.exports = {
@@ -42,6 +43,7 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new WebpackNotifierPlugin({alwaysNotify: true}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: './app/index.html'
