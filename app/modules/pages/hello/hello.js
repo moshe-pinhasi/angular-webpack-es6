@@ -17,12 +17,13 @@ appModule.config(['$stateProvider', '$urlRouterProvider',
 			.state('hello', {
 				url: '/',
 				template: html,
-				controller: HelloController,
+				controller: 'HelloController',
 				controllerAs: 'helloCtrl'
-			})
-		;
+			});
 
 		$urlRouterProvider.otherwise('/');
 	}]);
+
+appModule.controller('HelloController', HelloController);
 
 module.exports = appModule.name;

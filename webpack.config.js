@@ -1,17 +1,17 @@
 'use strict';
 
-var webpack = require('webpack'),
+const webpack = require('webpack'),
 	HtmlWebpackPlugin = require('html-webpack-plugin'),
 	WebpackNotifierPlugin = require('webpack-notifier'),
 	path = require('path');
 
 module.exports = {
-	debug: true,
+	context: path.resolve(__dirname, 'app'),
 	entry: {
 		main: './app/index.js'
 	},
 	output: {
-		path: path.join(__dirname, 'dist'),
+		path: path.join(__dirname, 'build'),
 		filename: 'app.js'
 	},
 	module: {
