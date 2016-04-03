@@ -8,7 +8,7 @@ const webpack = require('webpack'),
 module.exports = {
 	context: path.resolve(__dirname, 'app'),
 	entry: {
-		main: './app/index.js'
+		main: './index.js'
 	},
 	output: {
 		path: path.join(__dirname, 'build'),
@@ -30,7 +30,7 @@ module.exports = {
 			},
 			{
 				test: /\.html$/,
-				loader: "html-loader"
+				loader: "html"
 			}
 			//{
 			//	test: /\.css$/,
@@ -46,7 +46,7 @@ module.exports = {
 		new WebpackNotifierPlugin({alwaysNotify: true}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
-			template: './app/index.html'
+			template: './index.html'
 		})
 	]
 };
