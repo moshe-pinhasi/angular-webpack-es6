@@ -2,7 +2,6 @@
 
 require('./hello.less');
 
-const html = require('./hello.html');
 const appModule = angular.module('hello', []);
 
 HelloController.$inject = [];
@@ -12,11 +11,11 @@ function HelloController() {
 }
 
 appModule.config(['$stateProvider', '$urlRouterProvider',
-	($stateProvider, $urlRouterProvider) => {
+	function ($stateProvider, $urlRouterProvider) {
 		$stateProvider
 			.state('hello', {
 				url: '/',
-				template: html,
+				template: require('./hello.html'),
 				controller: 'HelloController',
 				controllerAs: 'helloCtrl'
 			});

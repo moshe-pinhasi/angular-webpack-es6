@@ -17,29 +17,26 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.es6.js$/,
-				loader: "babel-loader"
+				test: /\.js$/,
+				loader: "babel",
+				exclude: /node_modules/
 			},
 			{
 				test: /\.css$/,
-				loader: "css-loader"
+				loader: "style-loader!css-loader"
 			},
 			{
 				test: /\.less$/,
-				loader: "css-loader!less-loader"
+				loader: "style-loader!css-loader!less-loader"
 			},
 			{
 				test: /\.html$/,
 				loader: "html"
+			},
+			{
+				test: /\.(png|jpg)$/,
+				loader: 'url?limit=80192&name=[name].[ext]'
 			}
-			//{
-			//	test: /\.css$/,
-			//	loader: 'style!css?sourceMap'
-			//},
-			//{
-			//	test: /\.less$/,
-			//	loader: 'style!css?sourceMap!less?sourceMap'
-			//}
 		]
 	},
 	plugins: [
