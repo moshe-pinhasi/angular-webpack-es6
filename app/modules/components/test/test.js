@@ -4,16 +4,15 @@ require('./test.less');
 
 const appModule = angular.module('test', []);
 
-HelloController.$inject = [];
-function HelloController() {
+TestController.$inject = [];
+function TestController() {
 
 
 }
 
 appModule.component('test', {
 	controllerAs: 'testCtrl',
-	controller: [function() {
-	}],
+	controller: TestController,
 	template: require('./test.html')
 });
 
