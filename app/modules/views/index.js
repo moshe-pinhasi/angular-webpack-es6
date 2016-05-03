@@ -1,3 +1,3 @@
-module.exports = angular.module('pages', [
+module.exports = angular.module('views', [
 	require('./hello/hello')
 ]);
