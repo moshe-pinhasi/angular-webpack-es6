@@ -18,7 +18,7 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				loader: "babel",
+				loader: "babel-loader",
 				exclude: /node_modules/
 			},
 			{
@@ -31,7 +31,7 @@ module.exports = {
 			},
 			{
 				test: /\.html$/,
-				loader: "html"
+				loader: "html-loader"
 			},
 			{
 				test: /\.(png|jpg)$/,
