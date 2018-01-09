@@ -14,6 +14,7 @@ module.exports = {
 		path: path.join(__dirname, 'build'),
 		filename: 'app.js'
 	},
+	devtool: '#eval-source-map',
 	module: {
 		loaders: [
 			{
@@ -36,6 +37,14 @@ module.exports = {
 			{
 				test: /\.(png|jpg)$/,
 				loader: 'url?limit=80192&name=[name].[ext]'
+			},
+			{ 
+				test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+				loader: "url-loader?limit=10000&mimetype=application/font-woff" 
+			},
+			{ 
+				test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+				loader: "file-loader" 
 			}
 		]
 	},

@@ -1,3 +1,5 @@
-module.exports = angular.module('components', [
-	require('./test/test')
-]);
+import TestModule from './test/test.module'
+
+export default angular.module('components', [
+	TestModule
+]).name

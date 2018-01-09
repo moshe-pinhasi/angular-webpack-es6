@@ -1,4 +1,9 @@
+import ServicesModule from './services'
+import ComponentsModule from './services'
+import ViewsModule from './views'
+
 module.exports = angular.module('appModules', [
-	require('./components').name,
-	require('./views').name
-]);
+	ServicesModule,
+	ComponentsModule,
+	ViewsModule
+]).name
